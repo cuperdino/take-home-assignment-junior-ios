@@ -11,18 +11,22 @@ import Alamofire
 import PromiseKit
 
 protocol NetworkServiceProtocol {
-    func callApi<T: Codable>(endpoint: Endpoint, returnType: T.Type) -> Promise<Any>
+    func callApi<T: Codable>(endpoint: Endpoint, returnType: T.Type) -> Promise<T>
 }
 
 class NetworkService: NetworkServiceProtocol {
-    func callApi<T: Codable>(endpoint: Endpoint, returnType: T.Type) -> Promise<Any> {
+    func callApi<T: Codable>(endpoint: Endpoint, returnType: T.Type) -> Promise<T> {
         return Promise { seal in
             AF.request(endpoint).responseJSON {
                 response in
                 switch response.result {
                 case .success:
-                    seal.fulfill((Any).self)
-                    print(response.value)
+                    do {
+                        let data = try JSONDecoder().decode(T.self, from: response.data ?? Data())
+                        seal.fulfill(data)
+                    } catch {
+                        seal.reject(error)
+                    }
                 case .failure(let error):
                     seal.reject(error)
                     print(error)
