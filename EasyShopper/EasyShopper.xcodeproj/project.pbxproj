@@ -160,6 +160,7 @@
 				3174478D2492AE7000862E28 /* Sources */,
 				3174478E2492AE7000862E28 /* Frameworks */,
 				3174478F2492AE7000862E28 /* Resources */,
+				4AA4D919D6AA50CE4E1C7BFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +218,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4AA4D919D6AA50CE4E1C7BFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyShopper/Pods-EasyShopper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyShopper/Pods-EasyShopper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyShopper/Pods-EasyShopper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A4C71B026A92B261968AC959 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
