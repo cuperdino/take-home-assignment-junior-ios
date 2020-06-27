@@ -36,10 +36,17 @@ class ShoppingBasketViewController: UIViewController {
         guard let productsViewController = storyboard.instantiateViewController(withIdentifier: "ProductsViewController") as? ProductsViewController else {
             return
         }
+        productsViewController.delegate = self
         self.navigationController?.pushViewController(productsViewController, animated: true)
     }
     
     @objc
     func addCleared(sender: UIBarButtonItem) {
+    }
+}
+
+extension ShoppingBasketViewController: ProductsViewControllerDelegate {
+    func productAdded(product: Product) {
+        print(product)
     }
 }

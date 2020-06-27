@@ -9,9 +9,14 @@
 import UIKit
 import AlamofireImage
 
+protocol ProductsViewControllerDelegate: class {
+    func productAdded(product: Product)
+}
+
 class ProductsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    weak var delegate: ProductsViewControllerDelegate?
     
     var products: [Product] = []
 
@@ -57,5 +62,14 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         productCell.nameLabel.text = product.name
         
         return productCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard products.count > 0 else {
+            return
+        }
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        let product = self.products[indexPath.row]
+        self.delegate?.productAdded(product: product)
     }
 }
