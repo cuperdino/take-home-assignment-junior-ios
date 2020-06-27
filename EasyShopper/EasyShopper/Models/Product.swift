@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Product: Codable {
+struct Product: Codable, Hashable {
     let id: String
     let barcode: String
     let description: String
