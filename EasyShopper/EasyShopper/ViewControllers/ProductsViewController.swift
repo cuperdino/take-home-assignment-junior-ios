@@ -31,11 +31,17 @@ class ProductsViewController: UIViewController {
 
 extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let defaultCell = UITableViewCell()
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell else {
+            return defaultCell
+        }
+        
+        cell.nameLabel.text = "Default text"
+        
+        return cell
     }
-
 }
