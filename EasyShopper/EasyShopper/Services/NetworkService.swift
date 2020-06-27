@@ -8,25 +8,32 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
 protocol NetworkServiceProtocol {
-    func callApi<T: Codable>(endpoint: Endpoint, returnType: T.Type)
+    func callApi<T: Codable>(endpoint: Endpoint, returnType: T.Type) -> Promise<Any>
 }
 
 class NetworkService: NetworkServiceProtocol {
-    func callApi<T: Codable>(endpoint: Endpoint, returnType: T.Type) {
+    func callApi<T: Codable>(endpoint: Endpoint, returnType: T.Type) -> Promise<Any> {
+        return Promise { seal in
             AF.request(endpoint).responseJSON {
                 response in
-                    switch response.result {
-                    case .success: print(response.value)
-                    case .failure(let error): print(error)
+                switch response.result {
+                case .success:
+                    seal.fulfill((Any).self)
+                    print(response.value)
+                case .failure(let error):
+                    seal.reject(error)
+                    print(error)
+                }
             }
         }
     }
 }
 
 
-enum Endpoint: URLRequestConvertible {
+enum Endpoint: Alamofire.URLRequestConvertible {
     case getProducts
     
     func asURLRequest() throws -> URLRequest {
