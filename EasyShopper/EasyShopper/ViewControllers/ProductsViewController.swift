@@ -24,8 +24,7 @@ class ProductsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.setupTableView()
         self.getProducts()
     }
 
@@ -36,6 +35,12 @@ class ProductsViewController: UIViewController {
         }.catch { error in
             print(error)
         }
+    }
+    
+    func setupTableView() {
+        self.tableView.tableFooterView = UIView()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 }
 

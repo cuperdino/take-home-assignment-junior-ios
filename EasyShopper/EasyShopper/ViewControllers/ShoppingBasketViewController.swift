@@ -17,8 +17,7 @@ class ShoppingBasketViewController: UIViewController {
         super.viewDidLoad()
         self.addRightBarButtonItem()
         self.addLeftBarButtonItem()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +30,12 @@ class ShoppingBasketViewController: UIViewController {
     
     func addLeftBarButtonItem() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Clear", style: .done, target: self, action: #selector(addCleared))
+    }
+    
+    func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.tableFooterView = UIView()
     }
       
     @objc
