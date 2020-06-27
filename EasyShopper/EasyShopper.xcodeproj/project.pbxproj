@@ -22,6 +22,7 @@
 		9EE3582924A7B97E0036B48F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3582824A7B97E0036B48F /* NetworkService.swift */; };
 		9EE3583224A7C2590036B48F /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3583124A7C2590036B48F /* ProductTableViewCell.swift */; };
 		9EE3583424A7C3FE0036B48F /* ProductArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3583324A7C3FE0036B48F /* ProductArray.swift */; };
+		9EE3583624A7CF3D0036B48F /* ShoppingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3583524A7CF3D0036B48F /* ShoppingItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		9EE3582824A7B97E0036B48F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9EE3583124A7C2590036B48F /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		9EE3583324A7C3FE0036B48F /* ProductArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductArray.swift; sourceTree = "<group>"; };
+		9EE3583524A7CF3D0036B48F /* ShoppingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewCell.swift; sourceTree = "<group>"; };
 		F659CEFE302A05B8AFF8C3B4 /* Pods-EasyShopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyShopper.debug.xcconfig"; path = "Target Support Files/Pods-EasyShopper/Pods-EasyShopper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				9EE3583124A7C2590036B48F /* ProductTableViewCell.swift */,
+				9EE3583524A7CF3D0036B48F /* ShoppingItemTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */,
 				317447972492AE7000862E28 /* SceneDelegate.swift in Sources */,
 				9EE3583224A7C2590036B48F /* ProductTableViewCell.swift in Sources */,
+				9EE3583624A7CF3D0036B48F /* ShoppingItemTableViewCell.swift in Sources */,
 				317447AC2492AEE500862E28 /* DemoData.swift in Sources */,
 				317447AF2492B6DC00862E28 /* Product.swift in Sources */,
 				9EE3583424A7C3FE0036B48F /* ProductArray.swift in Sources */,
