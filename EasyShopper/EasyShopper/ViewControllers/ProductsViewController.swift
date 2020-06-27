@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProductsViewController: UIViewController {
     
@@ -25,7 +26,7 @@ class ProductsViewController: UIViewController {
         let networkService = NetworkService()
         networkService.callApi(endpoint: .getProducts, returnType: ProductArray.self).done { response in
             self.products = response.products
-            print(self.products)
+            self.tableView.reloadData()
         }.catch { error in
             print(error)
         }
@@ -34,17 +35,27 @@ class ProductsViewController: UIViewController {
 
 extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let defaultCell = UITableViewCell()
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell else {
-            return defaultCell
+        let cell = UITableViewCell()
+        
+        guard products.count > 0 else {
+            return cell
         }
         
-        cell.nameLabel.text = "Default text"
+        guard let productCell = self.tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell else {
+            return cell
+        }
+        let product = products[indexPath.row]
         
-        return cell
+        if let imageUrl = URL(string: product.imageURL) {
+            productCell.productImageView.af.setImage(withURL: imageUrl)
+        }
+        
+        productCell.nameLabel.text = product.name
+        
+        return productCell
     }
 }
