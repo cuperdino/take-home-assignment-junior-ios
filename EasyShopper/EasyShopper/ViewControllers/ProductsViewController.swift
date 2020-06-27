@@ -12,6 +12,10 @@ class ProductsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getProducts()
+    }
+
+    func getProducts() {
         let networkService = NetworkService()
         networkService.callApi(endpoint: .getProducts, returnType: Product.self).done { products in
             print(products)
@@ -19,5 +23,4 @@ class ProductsViewController: UIViewController {
             print(error)
         }
     }
-
 }
