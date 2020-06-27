@@ -46,6 +46,25 @@ class ShoppingBasketViewController: UIViewController {
     @objc
     func addCleared(sender: UIBarButtonItem) {
     }
+    
+    func createShoppingItemTableViewCell(indexPath: IndexPath) -> UITableViewCell {
+        let defaultCell = UITableViewCell()
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingItemTableViewCell", for: indexPath) as? ShoppingItemTableViewCell else {
+            return defaultCell
+        }
+        
+        let item = shoppingBasket.basketItems[indexPath.row]
+        
+        if let imageUrl = URL(string: item.product.imageURL) {
+            cell.shoppingItemImageView?.af.setImage(withURL: imageUrl)
+        }
+        
+        cell.nameLabel.text = item.product.name
+        cell.quantityLabel.text = "Quantity: \(item.quantity)"
+        
+        return cell
+    }
 }
 
 extension ShoppingBasketViewController: ProductsViewControllerDelegate {
@@ -86,13 +105,11 @@ extension ShoppingBasketViewController: UITableViewDelegate, UITableViewDataSour
         
         let section = ShoppingCartSection(rawValue: indexPath.section)
         
-        let item = self.shoppingBasket.basketItems[indexPath.row]
-        
         switch section {
-        case .products:
-            defaultCell.textLabel?.text = item.product.name
+        case .products: return self.createShoppingItemTableViewCell(indexPath: indexPath)
+        case .checkoutTotal:
+            defaultCell.textLabel?.text = "Total price: \(shoppingBasket.totalPrice)"
             return defaultCell
-        case .checkoutTotal: return defaultCell
         default: return defaultCell
         }
     }
