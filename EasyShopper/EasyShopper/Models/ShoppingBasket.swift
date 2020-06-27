@@ -11,6 +11,12 @@ import Foundation
 class ShoppingBasket {
     var basketItems: [BasketItem] = []
     
+    var totalPrice: Int {
+        get {
+            self.calculateTotalPrice()
+        }
+    }
+    
     func addProduct(product: Product) {
         if !self.basketItems.contains(where: {$0.product == product}) {
             self.basketItems.append(BasketItem(product: product))
@@ -24,6 +30,15 @@ class ShoppingBasket {
     
     func clearBasket() {
         self.basketItems = []
+    }
+    
+    private func calculateTotalPrice() -> Int {
+        var totalPrice = 0
+        for item in basketItems {
+            totalPrice += item.totalPrice
+        }
+        
+        return totalPrice
     }
 }
 
