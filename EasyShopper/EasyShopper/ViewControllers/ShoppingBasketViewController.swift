@@ -45,6 +45,8 @@ class ShoppingBasketViewController: UIViewController {
     
     @objc
     func addCleared(sender: UIBarButtonItem) {
+        self.shoppingBasket.clearBasket()
+        self.tableView.reloadData()
     }
     
     func createShoppingItemTableViewCell(indexPath: IndexPath) -> UITableViewCell {
