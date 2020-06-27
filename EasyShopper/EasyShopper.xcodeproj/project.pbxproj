@@ -19,6 +19,7 @@
 		317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447B02492B78A00862E28 /* ShoppingBasket.swift */; };
 		922B7BEC3FF6254E12163337 /* Pods_EasyShopper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD27099C7C187A7A4488211 /* Pods_EasyShopper.framework */; };
 		9EE3582724A7B7AC0036B48F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3582624A7B7AC0036B48F /* ProductsViewController.swift */; };
+		9EE3582924A7B97E0036B48F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3582824A7B97E0036B48F /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		317447B02492B78A00862E28 /* ShoppingBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasket.swift; sourceTree = "<group>"; };
 		8BD27099C7C187A7A4488211 /* Pods_EasyShopper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyShopper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3582624A7B7AC0036B48F /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		9EE3582824A7B97E0036B48F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F659CEFE302A05B8AFF8C3B4 /* Pods-EasyShopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyShopper.debug.xcconfig"; path = "Target Support Files/Pods-EasyShopper/Pods-EasyShopper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 				3174479D2492AE7200862E28 /* Assets.xcassets */,
 				3174479F2492AE7200862E28 /* LaunchScreen.storyboard */,
 				317447A22492AE7200862E28 /* Info.plist */,
+				9EE3582824A7B97E0036B48F /* NetworkService.swift */,
 			);
 			path = EasyShopper;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				317447992492AE7000862E28 /* ShoppingBasketViewController.swift in Sources */,
 				9EE3582724A7B7AC0036B48F /* ProductsViewController.swift in Sources */,
 				317447952492AE7000862E28 /* AppDelegate.swift in Sources */,
+				9EE3582924A7B97E0036B48F /* NetworkService.swift in Sources */,
 				317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */,
 				317447972492AE7000862E28 /* SceneDelegate.swift in Sources */,
 				317447AC2492AEE500862E28 /* DemoData.swift in Sources */,
