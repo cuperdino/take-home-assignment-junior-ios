@@ -19,10 +19,15 @@ class ShoppingBasketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addRightBarButtonItem()
+        self.addLeftBarButtonItem()
     }
     
     func addRightBarButtonItem() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Plus", style: .plain, target: self, action: #selector(addTapped))
+    }
+    
+    func addLeftBarButtonItem() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Clear", style: .done, target: self, action: #selector(addCleared))
     }
       
     @objc
@@ -32,5 +37,9 @@ class ShoppingBasketViewController: UIViewController {
             return
         }
         self.navigationController?.pushViewController(productsViewController, animated: true)
+    }
+    
+    @objc
+    func addCleared(sender: UIBarButtonItem) {
     }
 }
