@@ -7,19 +7,22 @@
 //
 
 import UIKit
-
-#warning("""
-The initial viewcontroller should show the shopping basket.
-It should contain a 'Plus' button for adding new items to the basket.
-It should contain a 'Clear' button for removing all items in the basket.
-""")
-
 class ShoppingBasketViewController: UIViewController {
+    
+    let shoppingBasket = ShoppingBasket()
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addRightBarButtonItem()
         self.addLeftBarButtonItem()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     func addRightBarButtonItem() {
@@ -47,6 +50,54 @@ class ShoppingBasketViewController: UIViewController {
 
 extension ShoppingBasketViewController: ProductsViewControllerDelegate {
     func productAdded(product: Product) {
-        print(product)
+        self.shoppingBasket.addProduct(product: product)
+        dump(shoppingBasket.basketItems)
     }
+}
+
+extension ShoppingBasketViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        guard self.shoppingBasket.basketItems.count > 0 else {
+            return 0
+        }
+        return ShoppingCartSection.sectionsCount.rawValue
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard self.shoppingBasket.basketItems.count > 0 else {
+            return 0
+        }
+        let section = ShoppingCartSection(rawValue: section)
+        
+        switch section {
+        case .products: return shoppingBasket.basketItems.count
+        case .checkoutTotal: return 1
+        default: return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let defaultCell = UITableViewCell()
+        
+        guard self.shoppingBasket.basketItems.count > 0 else {
+            return defaultCell
+        }
+        
+        let section = ShoppingCartSection(rawValue: indexPath.section)
+        
+        let item = self.shoppingBasket.basketItems[indexPath.row]
+        
+        switch section {
+        case .products:
+            defaultCell.textLabel?.text = item.product.name
+            return defaultCell
+        case .checkoutTotal: return defaultCell
+        default: return defaultCell
+        }
+    }
+}
+
+enum ShoppingCartSection: Int {
+    case products, checkoutTotal, sectionsCount
 }
