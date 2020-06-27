@@ -14,7 +14,7 @@ It should contain a 'Plus' button for adding new items to the basket.
 It should contain a 'Clear' button for removing all items in the basket.
 """)
 
-class ViewController: UIViewController {
+class ShoppingBasketViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
