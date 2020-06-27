@@ -18,7 +18,19 @@ class ShoppingBasketViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
+        self.addRightBarButtonItem()
+    }
+    
+    func addRightBarButtonItem() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Plus", style: .plain, target: self, action: #selector(addTapped))
+    }
+      
+    @objc
+    func addTapped(sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let productsViewController = storyboard.instantiateViewController(withIdentifier: "ProductsViewController") as? ProductsViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(productsViewController, animated: true)
     }
 }
