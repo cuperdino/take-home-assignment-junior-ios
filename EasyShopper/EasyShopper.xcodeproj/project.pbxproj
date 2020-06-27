@@ -18,6 +18,7 @@
 		317447AF2492B6DC00862E28 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447AE2492B6DC00862E28 /* Product.swift */; };
 		317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447B02492B78A00862E28 /* ShoppingBasket.swift */; };
 		922B7BEC3FF6254E12163337 /* Pods_EasyShopper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD27099C7C187A7A4488211 /* Pods_EasyShopper.framework */; };
+		9EE3582724A7B7AC0036B48F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3582624A7B7AC0036B48F /* ProductsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		317447AE2492B6DC00862E28 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		317447B02492B78A00862E28 /* ShoppingBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasket.swift; sourceTree = "<group>"; };
 		8BD27099C7C187A7A4488211 /* Pods_EasyShopper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyShopper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EE3582624A7B7AC0036B48F /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		F659CEFE302A05B8AFF8C3B4 /* Pods-EasyShopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyShopper.debug.xcconfig"; path = "Target Support Files/Pods-EasyShopper/Pods-EasyShopper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				317447A82492AE8E00862E28 /* DemoData */,
 				317447942492AE7000862E28 /* AppDelegate.swift */,
 				317447962492AE7000862E28 /* SceneDelegate.swift */,
+				9EE3582624A7B7AC0036B48F /* ProductsViewController.swift */,
 				317447982492AE7000862E28 /* ShoppingBasketViewController.swift */,
 				3174479A2492AE7000862E28 /* Main.storyboard */,
 				3174479D2492AE7200862E28 /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 			files = (
 				317447AA2492AEAA00862E28 /* NetworkServiceMock.swift in Sources */,
 				317447992492AE7000862E28 /* ShoppingBasketViewController.swift in Sources */,
+				9EE3582724A7B7AC0036B48F /* ProductsViewController.swift in Sources */,
 				317447952492AE7000862E28 /* AppDelegate.swift in Sources */,
 				317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */,
 				317447972492AE7000862E28 /* SceneDelegate.swift in Sources */,
