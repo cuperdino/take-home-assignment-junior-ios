@@ -11,6 +11,8 @@ import UIKit
 class ProductsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var products: [Product] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +23,9 @@ class ProductsViewController: UIViewController {
 
     func getProducts() {
         let networkService = NetworkService()
-        networkService.callApi(endpoint: .getProducts, returnType: Product.self).done { products in
-            print(products)
+        networkService.callApi(endpoint: .getProducts, returnType: ProductArray.self).done { response in
+            self.products = response.products
+            print(self.products)
         }.catch { error in
             print(error)
         }

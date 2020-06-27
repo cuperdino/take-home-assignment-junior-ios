@@ -21,6 +21,7 @@
 		9EE3582724A7B7AC0036B48F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3582624A7B7AC0036B48F /* ProductsViewController.swift */; };
 		9EE3582924A7B97E0036B48F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3582824A7B97E0036B48F /* NetworkService.swift */; };
 		9EE3583224A7C2590036B48F /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3583124A7C2590036B48F /* ProductTableViewCell.swift */; };
+		9EE3583424A7C3FE0036B48F /* ProductArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3583324A7C3FE0036B48F /* ProductArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		9EE3582624A7B7AC0036B48F /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		9EE3582824A7B97E0036B48F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9EE3583124A7C2590036B48F /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		9EE3583324A7C3FE0036B48F /* ProductArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductArray.swift; sourceTree = "<group>"; };
 		F659CEFE302A05B8AFF8C3B4 /* Pods-EasyShopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyShopper.debug.xcconfig"; path = "Target Support Files/Pods-EasyShopper/Pods-EasyShopper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 		317447AD2492B6C600862E28 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9EE3583324A7C3FE0036B48F /* ProductArray.swift */,
 				317447AE2492B6DC00862E28 /* Product.swift */,
 				317447B02492B78A00862E28 /* ShoppingBasket.swift */,
 			);
@@ -293,6 +296,7 @@
 				9EE3583224A7C2590036B48F /* ProductTableViewCell.swift in Sources */,
 				317447AC2492AEE500862E28 /* DemoData.swift in Sources */,
 				317447AF2492B6DC00862E28 /* Product.swift in Sources */,
+				9EE3583424A7C3FE0036B48F /* ProductArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

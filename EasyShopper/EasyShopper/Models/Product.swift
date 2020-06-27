@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProductValue: Codable {
+struct Product: Codable {
     let id: String
     let barcode: String
     let description: String
@@ -27,5 +27,3 @@ struct ProductValue: Codable {
         case costPrice = "cost_price"
     }
 }
-
-typealias Product = [String: ProductValue]
