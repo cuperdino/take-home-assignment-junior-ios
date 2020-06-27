@@ -13,8 +13,6 @@
 		3174479C2492AE7000862E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3174479A2492AE7000862E28 /* Main.storyboard */; };
 		3174479E2492AE7200862E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3174479D2492AE7200862E28 /* Assets.xcassets */; };
 		317447A12492AE7200862E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3174479F2492AE7200862E28 /* LaunchScreen.storyboard */; };
-		317447AA2492AEAA00862E28 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447A92492AEAA00862E28 /* NetworkServiceMock.swift */; };
-		317447AC2492AEE500862E28 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447AB2492AEE500862E28 /* DemoData.swift */; };
 		317447AF2492B6DC00862E28 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447AE2492B6DC00862E28 /* Product.swift */; };
 		317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447B02492B78A00862E28 /* ShoppingBasket.swift */; };
 		922B7BEC3FF6254E12163337 /* Pods_EasyShopper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD27099C7C187A7A4488211 /* Pods_EasyShopper.framework */; };
@@ -36,8 +34,6 @@
 		3174479D2492AE7200862E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		317447A02492AE7200862E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		317447A22492AE7200862E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		317447A92492AEAA00862E28 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
-		317447AB2492AEE500862E28 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		317447AE2492B6DC00862E28 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		317447B02492B78A00862E28 /* ShoppingBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasket.swift; sourceTree = "<group>"; };
 		8BD27099C7C187A7A4488211 /* Pods_EasyShopper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyShopper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +84,6 @@
 				9EE3583724A7D2490036B48F /* AppDelegate+Injection.swift */,
 				317447AD2492B6C600862E28 /* Models */,
 				9EE3582B24A7BA050036B48F /* ViewControllers */,
-				317447A82492AE8E00862E28 /* DemoData */,
 				9EE3582A24A7B9E00036B48F /* Services */,
 				9EE3582C24A7BA1A0036B48F /* Storyboards */,
 				9EE3582F24A7C2370036B48F /* Views */,
@@ -96,15 +91,6 @@
 				317447A22492AE7200862E28 /* Info.plist */,
 			);
 			path = EasyShopper;
-			sourceTree = "<group>";
-		};
-		317447A82492AE8E00862E28 /* DemoData */ = {
-			isa = PBXGroup;
-			children = (
-				317447A92492AEAA00862E28 /* NetworkServiceMock.swift */,
-				317447AB2492AEE500862E28 /* DemoData.swift */,
-			);
-			path = DemoData;
 			sourceTree = "<group>";
 		};
 		317447AD2492B6C600862E28 /* Models */ = {
@@ -292,7 +278,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				317447AA2492AEAA00862E28 /* NetworkServiceMock.swift in Sources */,
 				317447992492AE7000862E28 /* ShoppingBasketViewController.swift in Sources */,
 				9EE3582724A7B7AC0036B48F /* ProductsViewController.swift in Sources */,
 				317447952492AE7000862E28 /* AppDelegate.swift in Sources */,
@@ -302,7 +287,6 @@
 				9EE3583824A7D2490036B48F /* AppDelegate+Injection.swift in Sources */,
 				9EE3583224A7C2590036B48F /* ProductTableViewCell.swift in Sources */,
 				9EE3583624A7CF3D0036B48F /* ShoppingItemTableViewCell.swift in Sources */,
-				317447AC2492AEE500862E28 /* DemoData.swift in Sources */,
 				317447AF2492B6DC00862E28 /* Product.swift in Sources */,
 				9EE3583424A7C3FE0036B48F /* ProductArray.swift in Sources */,
 			);
