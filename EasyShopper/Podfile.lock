@@ -11,23 +11,27 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
+  - Resolver (1.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2.1)
   - AlamofireImage (~> 4.1.0)
   - PromiseKit (~> 6.13.1)
+  - Resolver (~> 1.1.4)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
     - PromiseKit
+    - Resolver
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  Resolver: 1f4c046255cbadfa97094692e16e940d4329779f
 
-PODFILE CHECKSUM: a68680b0e4d893d884eab4edb2532675aa5613a2
+PODFILE CHECKSUM: dd6cd395d17ff8086ab2f0a6b8b038bda3cbaaec
 
 COCOAPODS: 1.9.1

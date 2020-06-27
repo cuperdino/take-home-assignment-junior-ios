@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import Resolver
 
 protocol ProductsViewControllerDelegate: class {
     func productAdded(product: Product)
@@ -15,6 +16,7 @@ protocol ProductsViewControllerDelegate: class {
 
 class ProductsViewController: UIViewController {
     
+    @Injected var networkService: NetworkServiceProtocol
     @IBOutlet weak var tableView: UITableView!
     weak var delegate: ProductsViewControllerDelegate?
     
@@ -28,7 +30,6 @@ class ProductsViewController: UIViewController {
     }
 
     func getProducts() {
-        let networkService = NetworkService()
         networkService.callApi(endpoint: .getProducts, returnType: ProductArray.self).done { response in
             self.products = response.products
             self.tableView.reloadData()
